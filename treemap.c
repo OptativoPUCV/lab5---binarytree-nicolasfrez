@@ -79,6 +79,7 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 Pair * searchTreeMap(TreeMap * tree, void* key) 
 {
+  treeNode* current = tree->root; 
   while(current!=NULL)
   {
     int cmp = tree->lower_than(current->pair->key, key)
