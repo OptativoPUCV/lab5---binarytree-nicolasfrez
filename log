@@ -277,3 +277,22 @@ treemap.c:84:9: error: unused variable ‘comparacion’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 81d4d30
+Thu 14 Sep 2023 05:54:30 PM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:82:9: error: ‘treeMap’ undeclared (first use in this function); did you mean ‘TreeMap’?
+   82 |   while(treeMap->current!=NULL)
+      |         ^~~~~~~
+      |         TreeMap
+treemap.c:82:9: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:84:27: error: ‘current’ undeclared (first use in this function)
+   84 |     int cmp = strcmp(key, current->pair->key);
+      |                           ^~~~~~~
+treemap.c:84:9: error: unused variable ‘cmp’ [-Werror=unused-variable]
+   84 |     int cmp = strcmp(key, current->pair->key);
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+124d9b1
