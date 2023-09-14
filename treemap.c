@@ -94,14 +94,13 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
     }
     else
     {
+      if(is_equal(tree, current-pair->key, key)==1)
       tree->current = current;
       return current->pair;
     }
   }
   tree->current = NULL;
-
-  
-    return NULL;
+  return NULL;
 }
 
 
