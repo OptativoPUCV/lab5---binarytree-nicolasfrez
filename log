@@ -390,3 +390,20 @@ treemap.c:87:26: error: ‘treeNode’ undeclared (first use in this function); 
       |                          TreeNode
 Compilation failed
 81c242e
+Thu 14 Sep 2023 06:23:34 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:82:9: error: ‘current’ undeclared (first use in this function)
+   82 |   while(current!=NULL)
+      |         ^~~~~~~
+treemap.c:82:9: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:84:22: error: ‘lower_than’ undeclared (first use in this function)
+   84 |     int cmp = strcmp(lower_than->key, current->pair->key);
+      |                      ^~~~~~~~~~
+treemap.c:87:14: error: expected identifier or ‘(’ before ‘->’ token
+   87 |       TreeMap->current = treeNode->right;
+      |              ^~
+Compilation failed
+39af658
