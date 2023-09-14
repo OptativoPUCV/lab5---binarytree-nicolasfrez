@@ -93,15 +93,16 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
       tree->current = current;
       current = current->right;
     }
-    if (cmp<0)
+    else if (cmp<0)
     {
       tree->current = current;
       current = current->left;
     }
     else
     {
-      tree->current = current;
-      return current->pair;
+        tree->current = current;
+        return current->pair;
+      }
     }
   }
   tree->current = NULL;
