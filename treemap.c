@@ -94,7 +94,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
     }
     else
     {
-      if(is_equal(tree, current-pair->key, key)==1)
+      if(is_equal(tree, current-pair, key)==1)
       tree->current = current;
       return current->pair;
     }
