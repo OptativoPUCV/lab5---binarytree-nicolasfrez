@@ -81,7 +81,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 {
   while(current!=NULL)
   {
-    int cmp = strcmp(key, current->pair->key);
+    int comparacion = strcmp(key, current->pair->key);
         
   }
   
