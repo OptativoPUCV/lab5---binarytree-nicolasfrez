@@ -514,3 +514,18 @@ treemap.c:97:33: error: ‘pair’ undeclared (first use in this function); did 
 treemap.c:97:33: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 6ed3f46
+Thu 14 Sep 2023 06:36:09 PM UTC: 
+ treemap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:88:14: error: expected identifier or ‘(’ before ‘->’ token
+   88 |       TreeMap->current = current;
+      |              ^~
+treemap.c:97:33: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+   97 |       if(is_equal(tree, current-pair->key, key)==1)
+      |                                 ^~~~
+      |                                 Pair
+treemap.c:97:33: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+139971d
