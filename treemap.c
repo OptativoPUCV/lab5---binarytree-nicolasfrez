@@ -79,9 +79,9 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 Pair * searchTreeMap(TreeMap * tree, void* key) 
 {
-  while(TreeMap->current!=NULL)
+  while(current=NULL)
   {
-    int cmp = strcmp(key, current->pair->key);
+    int cmp = strcmp(map->lower_than->key, current->pair->key);
         
   }
   
