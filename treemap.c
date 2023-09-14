@@ -100,9 +100,8 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
     }
     else
     {
-        tree->current = current;
-        return current->pair;
-      }
+      tree->current = current;
+      return current->pair;
     }
   }
   tree->current = NULL;
