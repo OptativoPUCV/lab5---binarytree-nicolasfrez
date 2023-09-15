@@ -151,7 +151,7 @@ Pair * firstTreeMap(TreeMap * tree)
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-  if(tree==NULL || tree->current==NULL)
+  if(tree==NULL)
     return NULL;
 
   TreeNode * sucesor = NULL;
@@ -171,7 +171,11 @@ Pair * nextTreeMap(TreeMap * tree) {
     sucesor=parent;
   }
   if(sucesor!=NULL)
+  {
+    tree->current = sucesor;
     return sucesor->pair;
+  }
   else
+    tree->current=NULL;
     return NULL;
 }
