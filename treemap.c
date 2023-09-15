@@ -163,7 +163,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     while(parent!=NULL)
       {
         current=parent;
-        parent=parent->parent
+        parent=parent->parent;
       }
     
   }
