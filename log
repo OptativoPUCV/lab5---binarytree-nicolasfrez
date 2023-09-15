@@ -2055,3 +2055,23 @@ treemap.c:196:13: error: unused variable ‘ubNode’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 044b33f
+Fri 15 Sep 2023 11:58:43 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:200:46: error: expected ‘)’ before ‘{’ token
+  200 |       if(tree->lower_than(current->pair, key)
+      |         ~                                    ^
+      |                                              )
+  201 |       {
+      |       ~                                       
+treemap.c:209:5: error: expected expression before ‘}’ token
+  209 |     }
+      |     ^
+treemap.c:196:13: error: unused variable ‘ubNode’ [-Werror=unused-variable]
+  196 |   TreeNode* ubNode = NULL;
+      |             ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3550a4d
