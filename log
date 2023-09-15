@@ -1911,3 +1911,30 @@ treemap.c:141:5: error: expected expression before ‘}’ token
       |     ^
 Compilation failed
 6658911
+Fri 15 Sep 2023 11:39:10 PM UTC: 
+ treemap.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:124:5: error: expected expression before ‘TreeNode’
+  124 |     TreeNode* auxiliar = (node->left != NULL) ? node->left : node->right;
+      |     ^~~~~~~~
+treemap.c:129:26: error: ‘auxiliar’ undeclared (first use in this function)
+  129 |       node->parent->left=auxiliar;
+      |                          ^~~~~~~~
+treemap.c:129:26: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:134:7: error: ‘aux’ undeclared (first use in this function)
+  134 |       aux->parent = node->parent;
+      |       ^~~
+treemap.c:155:5: error: expected expression before ‘}’ token
+  155 |     }
+      |     ^
+treemap.c: At top level:
+treemap.c:159:3: error: expected identifier or ‘(’ before ‘else’
+  159 |   else
+      |   ^~~~
+treemap.c:167:1: error: expected identifier or ‘(’ before ‘}’ token
+  167 | }
+      | ^
+Compilation failed
+84f3220
