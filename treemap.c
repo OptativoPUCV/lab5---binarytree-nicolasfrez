@@ -153,8 +153,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     return NULL;
 
   TreeNode * sucesor = NULL;
-  if(current->right != NULL)
-    sucesor = minimum(current->right);
+  if(tree->current->right != NULL)
+    sucesor = minimum(tree->current->right);
   else
   {
     TreeNode * current = tree->current;
