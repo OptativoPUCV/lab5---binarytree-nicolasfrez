@@ -106,6 +106,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
       }
     }
   tree->current = NULL;
+  return current->pair;
 }
 
 Pair * upperBound(TreeMap * tree, void* key) 
