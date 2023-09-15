@@ -1819,3 +1819,14 @@ Fri 15 Sep 2023 11:16:34 PM UTC:
  tests:  23|2
 total_score: 50/70
 43428d4
+Fri 15 Sep 2023 11:18:50 PM UTC: 
+ treemap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:132:9: error: ‘parent’ undeclared (first use in this function)
+  132 |         parent->right=node->left;
+      |         ^~~~~~
+treemap.c:132:9: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+431db39
