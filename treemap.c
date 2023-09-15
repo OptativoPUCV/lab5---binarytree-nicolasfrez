@@ -165,6 +165,10 @@ Pair * nextTreeMap(TreeMap * tree) {
         current=parent;
         parent=parent->parent;
       }
-    
+    sucesor=parent;
   }
+  if(sucesor!=NULL)
+    return sucesor;
+  else
+    return NULL;
 }
