@@ -135,6 +135,12 @@ void removeNode(TreeMap * tree, TreeNode* node)
         auxiliar->parent = node->parent;
       }
     }
+    else
+    {
+      tree->root = auxiliar;
+      if(auxiliar!=NULL)
+        auxiliar->parent=NULL;
+    }
     
    
   }
