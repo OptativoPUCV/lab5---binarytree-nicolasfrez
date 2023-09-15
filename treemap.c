@@ -157,8 +157,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     sucesor = minimum(current->right);
   else
   {
-    TreeNode current = tree->current;
-    TreeNode parent = tree->current->parent;
+    TreeNode * current = tree->current;
+    TreeNode * parent = tree->current->parent;
 
     while(parent!=NULL)
       {
