@@ -89,23 +89,22 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
   while(current!=NULL)
   {
     int cmp = tree->lower_than(current->pair->key, key);
-    if(cmp<0)
+    if(cmp==0 && is_equal(tree, key, current->pair->key))
+    {
+      tree->current = current;
+      current = current->pair;
+    }
+    else if(cmp<0)
     {
       tree->current = current;
       current = current->left;
     }
-    else if(cmp>0)
-    {
-      tree->current = current;
-      current = current->right;
-    }
     else
     {
-        tree->current = current;
-        return current->pair;
-      }
+        current = current->right
     }
-  return current->pair;
+  tree->current = NULL;
+  return NULL;
 }
 
 Pair * upperBound(TreeMap * tree, void* key) 

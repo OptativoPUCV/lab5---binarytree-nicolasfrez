@@ -760,3 +760,31 @@ Fri 15 Sep 2023 06:35:04 PM UTC:
  tests:  8|7
 total_score: 5/70
 585e05a
+Fri 15 Sep 2023 06:39:28 PM UTC: 
+ treemap.c | 15 +++++++--------
+ 1 file changed, 7 insertions(+), 8 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:95:15: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   95 |       current = current->pair;
+      |               ^
+treemap.c:104:33: error: expected ‘;’ before ‘}’ token
+  104 |         current = current->right
+      |                                 ^
+      |                                 ;
+  105 |     }
+      |     ~                            
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+test.c:607: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+212ffc1
