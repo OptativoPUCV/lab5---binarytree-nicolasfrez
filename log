@@ -2025,3 +2025,33 @@ Fri 15 Sep 2023 11:51:05 PM UTC:
  tests:  25|1
 total_score: 60/70
 f2e328e
+Fri 15 Sep 2023 11:58:35 PM UTC: 
+ treemap.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:195:3: error: unknown type name ‘treeNode’; did you mean ‘TreeNode’?
+  195 |   treeNode* current = tree->root;
+      |   ^~~~~~~~
+      |   TreeNode
+treemap.c:195:23: error: initialization of ‘int *’ from incompatible pointer type ‘TreeNode *’ [-Werror=incompatible-pointer-types]
+  195 |   treeNode* current = tree->root;
+      |                       ^~~~
+treemap.c:200:34: error: request for member ‘pair’ in something not a structure or union
+  200 |       if(tree->lower_than(current->pair, key)
+      |                                  ^~
+treemap.c:200:46: error: expected ‘)’ before ‘{’ token
+  200 |       if(tree->lower_than(current->pair, key)
+      |         ~                                    ^
+      |                                              )
+  201 |       {
+      |       ~                                       
+treemap.c:209:5: error: expected expression before ‘}’ token
+  209 |     }
+      |     ^
+treemap.c:196:13: error: unused variable ‘ubNode’ [-Werror=unused-variable]
+  196 |   TreeNode* ubNode = NULL;
+      |             ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+044b33f
