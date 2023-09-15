@@ -130,10 +130,8 @@ void removeNode(TreeMap * tree, TreeNode* node)
         node->parent->left=auxiliar;
       else
         node->parent->right=auxiliar;
-      if(auxiliar != NULL)
-      {
-        auxiliar->parent = node->parent;
-      }
+      
+      aux->parent = node->parent;
     }
     else
     {

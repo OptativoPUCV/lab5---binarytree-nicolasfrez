@@ -1987,3 +1987,14 @@ Fri 15 Sep 2023 11:44:32 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 9aca64b
+Fri 15 Sep 2023 11:46:40 PM UTC: 
+ treemap.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:134:7: error: ‘aux’ undeclared (first use in this function)
+  134 |       aux->parent = node->parent;
+      |       ^~~
+treemap.c:134:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+f1b8663
