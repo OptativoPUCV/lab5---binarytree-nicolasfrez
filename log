@@ -663,3 +663,34 @@ Thu 14 Sep 2023 07:11:36 PM UTC:
  tests:  8|7
 total_score: 5/70
 ea794ce
+Fri 15 Sep 2023 06:17:52 PM UTC: 
+ treemap.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:57:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   57 |     return NULL;
+      |            ^~~~
+treemap.c:53:6: note: declared here
+   53 | void insertTreeMap(TreeMap * tree, void* key, void * value)
+      |      ^~~~~~~~~~~~~
+treemap.c:59:3: error: unknown type name ‘treeNode’; did you mean ‘TreeNode’?
+   59 |   treeNode* parent = NULL;
+      |   ^~~~~~~~
+      |   TreeNode
+treemap.c:60:3: error: unknown type name ‘treeNode’; did you mean ‘TreeNode’?
+   60 |   treeNode* current = tree->root;
+      |   ^~~~~~~~
+      |   TreeNode
+treemap.c:60:23: error: initialization of ‘int *’ from incompatible pointer type ‘TreeNode *’ [-Werror=incompatible-pointer-types]
+   60 |   treeNode* current = tree->root;
+      |                       ^~~~
+treemap.c:60:13: error: unused variable ‘current’ [-Werror=unused-variable]
+   60 |   treeNode* current = tree->root;
+      |             ^~~~~~~
+treemap.c:59:13: error: unused variable ‘parent’ [-Werror=unused-variable]
+   59 |   treeNode* parent = NULL;
+      |             ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9ef7bec
