@@ -176,6 +176,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     return sucesor->pair;
   }
   else
+  {
     tree->current=NULL;
     return NULL;
+  }
 }
