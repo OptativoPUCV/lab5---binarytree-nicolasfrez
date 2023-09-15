@@ -142,7 +142,7 @@ Pair * firstTreeMap(TreeMap * tree)
   if(tree==NULL)
     return NULL;
 
-  TreeNode * minNode = minum(tree->root)
+  TreeNode * minNode = minimum(tree->root);
   tree->current = minNode;
   return minNode->pair;
   

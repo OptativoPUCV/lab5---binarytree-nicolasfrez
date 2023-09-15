@@ -1188,3 +1188,9 @@ treemap.c:146:3: error: expected ‘,’ or ‘;’ before ‘tree’
 cc1: all warnings being treated as errors
 Compilation failed
 3c75bb5
+Fri 15 Sep 2023 07:36:29 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|5
+total_score: 10/70
+c3932ef
