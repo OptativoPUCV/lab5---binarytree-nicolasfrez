@@ -890,3 +890,57 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 c33d245
+Fri 15 Sep 2023 06:58:44 PM UTC: 
+ treemap.c | 17 ++++++++++++++---
+ 1 file changed, 14 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:58:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   58 |     return NULL;
+      |            ^~~~
+treemap.c:53:6: note: declared here
+   53 | void insertTreeMap(TreeMap * tree, void* key, void * value)
+      |      ^~~~~~~~~~~~~
+treemap.c:60:3: error: unknown type name ‘treeNode’; did you mean ‘TreeNode’?
+   60 |   treeNode* parent = NULL;
+      |   ^~~~~~~~
+      |   TreeNode
+treemap.c:61:3: error: unknown type name ‘treeNode’; did you mean ‘TreeNode’?
+   61 |   treeNode* current = tree->root;
+      |   ^~~~~~~~
+      |   TreeNode
+treemap.c:61:23: error: initialization of ‘int *’ from incompatible pointer type ‘TreeNode *’ [-Werror=incompatible-pointer-types]
+   61 |   treeNode* current = tree->root;
+      |                       ^~~~
+treemap.c:66:39: error: request for member ‘pair’ in something not a structure or union
+   66 |     int cmp = tree->lower_than(current->pair->key, key);
+      |                                       ^~
+treemap.c:67:45: error: request for member ‘pair’ in something not a structure or union
+   67 |     if(cmp==0 && is_equal(tree, key, current->pair->key))
+      |                                             ^~
+treemap.c:70:22: error: request for member ‘left’ in something not a structure or union
+   70 |       current=current->left;
+      |                      ^~
+treemap.c:72:22: error: request for member ‘right’ in something not a structure or union
+   72 |       current=current->right;
+      |                      ^~
+test.c: In function ‘searchTreeMap’:
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+test.c: In function ‘insertTreeMap’:
+test.c:606:1: error: expected declaration or statement at end of input
+In file included from test.c:4:
+treemap.c:60:13: error: variable ‘parent’ set but not used [-Werror=unused-but-set-variable]
+   60 |   treeNode* parent = NULL;
+      |             ^~~~~~
+At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f8d0fa7
