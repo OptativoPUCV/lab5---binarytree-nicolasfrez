@@ -119,6 +119,7 @@ void removeNode(TreeMap * tree, TreeNode* node)
   return;
   }
   //caso 2
+  /*
   if(node->left==NULL && node->right==NULL)
   {
     if(node->parent!=NULL)
@@ -135,6 +136,18 @@ void removeNode(TreeMap * tree, TreeNode* node)
       return;
       
     }
+    else if (node->left==NULL && node->right!=NULL){
+      if(node->parent!=NULL)
+    }
+  }
+*/
+  //caso 3
+  else
+  {
+    treeNode* minimoDerecha = minium(node->right);
+    node->pair->key = minimoDerecha->pair->key;
+    node->pair->value = minimoDerecha->pair->value;
+    removeNode(tree, minimoDerecha);
   }
   
 }
